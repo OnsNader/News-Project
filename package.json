@@ -1,0 +1,40 @@
+{
+  "name": "news_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "node ./testing/backend/functions_test.js | tap-spec",
+    "dem": "nodemon ./src/server.js",
+    "cover": "istanbul cover test.js",
+    "test-fro-dom": "node ./testing/frontend/dom_functions_test.js | tap-spec",
+    "test-fro-xhr": "node ./testing/frontend/xhr_functions_test.js | tap-spec",
+    "test-bac-fun": "node ./testing/backend/functions_test.js | tap-spec",
+    "test-bac-ro1": "node ./testing/backend/route_1_test.js | tap-spec",
+    "test-bac-ro2": "node ./testing/backend/route_2_test.js | tap-spec",
+    "test-bac-ser": "node ./testing/backend/server_test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACG5/News_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACG5/News_Project/issues"
+  },
+  "homepage": "https://github.com/FACG5/News_Project#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.18.3",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}
