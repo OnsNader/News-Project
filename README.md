@@ -5,7 +5,7 @@
 ---
 
 ### LINK :
-https://news-project1.herokuapp.com/
+https://news-project0.herokuapp.com/
 
 ---
 
