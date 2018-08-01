@@ -1,0 +1,48 @@
+@media (max-width: 1400px) {
+
+    
+div .container { 
+    width: 90%;
+    height:250px;
+  
+}
+}
+
+@media (max-width:700px) {
+    body .container .form .innerForm input:nth-child(1),  body .container .form .innerForm input:nth-child(2){
+    width: 100%;
+    font-size: 20px;
+    margin:10px auto ;    
+}  
+        
+body .container .form .innerForm input:nth-child(2){
+    font-size: 10px;
+    width: 100%;
+}  
+
+body .container .form input:first-child{
+    width: 100%;
+}  
+div .container .article .img{ 
+    display: block;
+    width: 95%;
+    text-align: center;
+height: 260px;
+}
+
+div .container .article .right{ 
+   display: block;
+   width: 100%;
+margin: 0 auto;
+text-align: center;
+}
+div .container .article .right h1{ 
+    text-align: center;
+
+}
+    
+div .container { 
+    width: 90%;
+height: 650px;
+  
+}}
