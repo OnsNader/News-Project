@@ -3,7 +3,7 @@ function sendRequest(searchQuery) {
     fetch('POST', searchQuery, dealWithData);
 }
 function dealWithData(Data) {
-  result_section[0].innerHTML=``;
+  result_section[0].textContent=``;
     for (let i = 0; i < Data.length; i++) {
         createHtmlElements(Data[i]);
     }

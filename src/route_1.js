@@ -1,6 +1,6 @@
 
 const { handlerHomePage, handlerErrorPage, handlerOtherFiles } = require('./functions');
-const handlerAPI = require('./route_2');
+const handlerAPI = require('./handling_api');
 
 function router(request, respone) {
   const endpoint = request.url;

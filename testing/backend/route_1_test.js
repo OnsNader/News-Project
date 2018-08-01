@@ -35,6 +35,7 @@ test('test of / home page "css/media" routes', (t) => {
     .end((err, res) => {
       t.error(err);
       t.equal(res.statusCode, 200, ' \'media page\'  Should Return 200');
+      t.equal()
       t.end();
     });
 });
