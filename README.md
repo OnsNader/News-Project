@@ -84,6 +84,22 @@ As a **user**
 
 ---
 
+## Test Coverage :
+
+<p align="center">
+  <img src="http://www12.0zz0.com/2018/08/01/16/383637691.png">
+</p>
+
+---
+
+## Travis :
+
+<p align="center">
+  <img src="http://www6.0zz0.com/2018/08/01/16/427415131.png">
+</p>
+
+---
+
 ## WHO ARE WE ?
 
  * **Asmaa** Almadhoon
