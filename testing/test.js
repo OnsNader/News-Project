@@ -1,6 +1,6 @@
 const test = require('tape');
 const supertest = require('supertest');
-const router = require('../../src/route_1');
+const router = require('../src/route_1');
 
 test('test of / home page routes', (t) => {
   supertest(router)
@@ -95,7 +95,7 @@ test('test of /news url', (t) => {
     .send(JSON.stringify({ query: 'cat', date: '2018-07-30' }))
     .end((err, res) => {
       t.error(err);
-        t.equal(res.headers['content-type'], 'application/javascript', ' \'news pag\' Should Return application/javascript');
+      t.equal(res.headers['content-type'], 'application/javascript', ' \'news pag\' Should Return application/javascript');
       t.equal(res.statusCode, 200, ' \'news page\' Should return 200');
       t.equal(typeof res.body, 'object', ' \'news page\' Should return object');
       t.end();
