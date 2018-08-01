@@ -18,7 +18,9 @@ function handlerAPI(request, respone) {
 function makeRequest(Data, respone) {
   const search = Data.query;
   const date = Data.date;
-  const url = `http://newsapi.org/v2/everything?apiKey=c81a105f5721488eba71743617508646&source=bbc-news&q=${search}&from=${date}&to=2018-07-30`;
+  const toDate = new Date().toJSON().slice(0, 10).replace(/-/g, '-');
+  const url = `http://newsapi.org/v2/everything?apiKey=c81a105f5721488eba71743617508646&source=bbc-news&q=${search}&from=${date}&to=${toDate}`;
+  console.log(url);
   requestXHR(url, getArrayFromJSONFile, respone);
 }
 
@@ -44,7 +46,7 @@ function getArrayFromJSONFile(Date, resopne) {
     const item = {};
     item.title = Date.articles[i].title;
     item.source = Date.articles[i].source.name;
-    item.image = Date.articles[i].urlToImage || 'https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_960_720.png';
+    item.image = Date.articles[i].urlToImage || 'https://imgur.com/pwlmsrM';
     item.url = Date.articles[i].url;
     item.description = Date.articles[i].description;
     arrayOfData.push(item);

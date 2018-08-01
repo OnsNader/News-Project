@@ -1,14 +1,13 @@
 function fetch(typeRequest, data, callback) {
-
-
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
+      console.log(xhr.responseText)
       if (xhr.status === 200) {
         const repon = xhr.responseText;
         callback(JSON.parse(repon));
       } else {
-        console.log('error');
+        callback('error');
       }
     }
   };

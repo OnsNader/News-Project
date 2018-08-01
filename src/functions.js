@@ -1,24 +1,29 @@
 const fs = require('fs');
 const path = require('path');
 
-function handlerHomePage(request, respone) {
+
+function handlerHomePage(request, respone, cb) {
   respone.writeHead(200, { 'content-type': 'text/html' });
   fs.readFile(path.join(__dirname, '..', 'public', 'index.html'), (err, file) => {
-    if (err) throw err;
+    if (err)
+      respone.end(err.message);
     else {
       respone.end(file);
     }
   });
 }
+
 function handlerErrorPage(request, respone) {
   respone.writeHead(404, { 'content-type': 'text/html' });
   fs.readFile(path.join(__dirname, '..', 'public', 'error.html'), (err, file) => {
-    if (err) throw err;
+    if (err)
+      respone.end(err.message);
     else {
       respone.end(file);
     }
   });
 }
+
 function handlerOtherFiles(request, respone) {
   const endpoint = request.url;
   const extension = endpoint.split('.')[1];
@@ -30,12 +35,16 @@ function handlerOtherFiles(request, respone) {
   };
   respone.writeHead(200, { 'content-type': contentType[extension] });
   fs.readFile(path.join(__dirname, '..', endpoint), (err, file) => {
-    if (err) throw err;
+    if (err)
+      response.end('something went wrong')
     else {
       respone.end(file);
     }
   });
 }
 
+function handlingError(err) {
+  console.log(err.message);
+}
 
-module.exports = { handlerHomePage, handlerErrorPage, handlerOtherFiles };
+module.exports = { handlerHomePage, handlerErrorPage, handlerOtherFiles, handlingError };
