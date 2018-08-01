@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/css/media.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 </head>
+
 <body>
+    <div class="container">
+        <h1>The News Project </h1>
+        <div class="form">
+            <label for="search">
+                <input type="search" id="search" placeholder="Search">
+            </label>
+            <div class="innerForm">
+                <input type="submit" value="Search" id="button">
+                <input type="date" id="date">
+            </div>
+        </div>
+    </div>
 
-<label for="search">
-    <input type="search" id="search" placeholder="Search">
-</label>
-<input type="submit"  value="search" id="button">
-<input type="date" id="date">
 
+<div class="result">
+<div class="container">
+<div class="article">
+ <div class="img"></div>
+ <div class="right">
+    <h1>Article Title </h1>
+    <h2> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad excepturi illo, perferendis,</h2>
+    <div class="more">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ab repellendus necessitatibus, sint beatae laborum aspernatur saepe maiores dicta vero temporibus maxime mollitia! Molestiae vel, possimus deserunt adipisci quae voluptatum.
+    </p>
+
+    </div>
+    <a href="#">The Original Article</a>
+</div>
+</div>
+</div>
+     
+    </div>
 </body>
 <script src="./public/js/xhr.js"></script>
 <script src="./public/js/dom.js"></script>
+<script src="./public/js/getData.js"></script>
+
 </html>

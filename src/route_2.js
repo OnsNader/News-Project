@@ -1,8 +1,9 @@
 const http = require('http');
 
-const arrayOfData = [];
+let arrayOfData = [];
 
 function handlerAPI(request, respone) {
+
   let allData = '';
   request.on('data', (caches) => {
     allData += caches;
@@ -17,7 +18,7 @@ function handlerAPI(request, respone) {
 function makeRequest(Data,respone) {
   const search = Data.query;
   const date = Data.date;
-  const url = `http://newsapi.org/v2/everything?apiKey=c81a105f5721488eba71743617508646&q=${search}&from=${date}&to=2018-07-30&sortBy=popularity`;
+  const url = `http://newsapi.org/v2/everything?apiKey=c81a105f5721488eba71743617508646&source=bbc-news&q=${search}&from=${date}&to=2018-07-30`;
   console.log(url);
   requestXHR(url,getArrayFromJSONFile,respone);
 }
@@ -46,11 +47,13 @@ function getArrayFromJSONFile(Date,resopne) {
     item.source = Date.articles[i].source.name;
     item.image = Date.articles[i].urlToImage;
     item.url = Date.articles[i].url;
-    item.author = Date.articles[i].author;
+    item.description = Date.articles[i].description;
     arrayOfData.push(item);
   }
   console.log(arrayOfData);
   resopne.end(JSON.stringify(arrayOfData));
+ 
+ arrayOfData=[];
 }
 
 module.exports = handlerAPI;
