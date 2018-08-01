@@ -1,5 +1,7 @@
 # News_Project
 
+[![Build Status](https://travis-ci.org/FACG5/News-Project.svg?branch=master)](https://travis-ci.org/FACG5/News-Project)
+
 ---
 
 ### LINK :
