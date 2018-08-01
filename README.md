@@ -45,12 +45,12 @@ Our website that give you ability to enter any subject in the input field and se
       - dom.js
       - xhr.js
 -  **`src`**
-  -  server.js
-  -  route_1.js
-  -  handling_api.js
-  -  functions.js
+    -  server.js
+    -  route_1.js
+    -  handling_api.js
+    -  functions.js
 -  **`testing`**
-  - test.js
+    - test.js
 - ReadMe.md
 - package.json
 - .gitignore
