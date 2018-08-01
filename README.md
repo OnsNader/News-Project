@@ -5,7 +5,7 @@
 ---
 
 ### LINK :
-https://cryptic-fjord-73301.herokuapp.com/
+https://news-project1.herokuapp.com/
 
 ---
 
