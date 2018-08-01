@@ -102,3 +102,9 @@ test('test of /news url', (t) => {
             t.end();
         });
 });
+
+test('try tape is working ',(t)=>{
+    t.equal(1,1,'The Both Should be Equal');
+    t.end();
+})
+

@@ -3,13 +3,17 @@ function sendRequest(searchQuery) {
     fetch('POST', searchQuery, dealWithData);
 }
 function dealWithData(Data) {
-  result_section[0].textContent=``;
+    result_section[0].textContent = ``;
+    if (Data.length === 0) {
+        alert("There is no result in API");
+        return;
+    }
     for (let i = 0; i < Data.length; i++) {
         createHtmlElements(Data[i]);
     }
 }
 function createHtmlElements(item) {
-  
+
     //Create Elements 
     const container = document.createElement("div");
     const article = document.createElement("div");
@@ -30,14 +34,14 @@ function createHtmlElements(item) {
 
 
     //Add Information to Elements
-    img.setAttribute("style",`background:url(${item.image});`);
+    img.setAttribute("style", `background:url(${item.image});`);
     h1.textContent = item.title;
     h2.textContent = item.source;
-    p.textContent= item.description;
-    a.href=item.url;
-    a.textContent=`The Full Article`;
-    a.target=`_blank`;
-    
+    p.textContent = item.description;
+    a.href = item.url;
+    a.textContent = `The Full Article`;
+    a.target = `_blank`;
+
     //Nesting Elements
     right.appendChild(h1);
     right.appendChild(h2);
