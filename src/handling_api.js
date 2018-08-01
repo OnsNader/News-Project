@@ -45,7 +45,7 @@ function getArrayFromJSONFile(Date, resopne) {
     const item = {};
     item.title = Date.articles[i].title;
     item.source = Date.articles[i].source.name;
-    item.image = Date.articles[i].urlToImage;
+    item.image = Date.articles[i].urlToImage || 'https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_960_720.png';
     item.url = Date.articles[i].url;
     item.description = Date.articles[i].description;
     arrayOfData.push(item);
