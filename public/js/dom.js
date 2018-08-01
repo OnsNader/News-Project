@@ -12,4 +12,5 @@ function getDataFromFields(){
     query: search.value,
     date: date.value,
   };
+  
 }
