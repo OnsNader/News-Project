@@ -5,7 +5,7 @@
 ---
 
 ### LINK :
-https://cryptic-fjord-73301.herokuapp.com/
+https://news-project1.herokuapp.com/
 
 ---
 
@@ -81,6 +81,22 @@ As a **user**
 >I want to **know what happened in the world now**
 <!-- -->
 >So that **I select the start date search**
+
+---
+
+## Test Coverage :
+
+<p align="center">
+  <img src="http://www12.0zz0.com/2018/08/01/16/383637691.png">
+</p>
+
+---
+
+## Travis :
+
+<p align="center">
+  <img src="http://www6.0zz0.com/2018/08/01/16/427415131.png">
+</p>
 
 ---
 
