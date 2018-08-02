@@ -6,7 +6,7 @@ function handlerHomePage(request, respone, cb) {
   respone.writeHead(200, { 'content-type': 'text/html' });
   fs.readFile(path.join(__dirname, '..', 'public', 'index.html'), (err, file) => {
     if (err)
-      respone.end(err.message);
+      console.log(err.message);
     else {
       respone.end(file);
     }
@@ -17,7 +17,7 @@ function handlerErrorPage(request, respone) {
   respone.writeHead(404, { 'content-type': 'text/html' });
   fs.readFile(path.join(__dirname, '..', 'public', 'error.html'), (err, file) => {
     if (err)
-      respone.end(err.message);
+    console.log(err.message);
     else {
       respone.end(file);
     }
@@ -36,7 +36,7 @@ function handlerOtherFiles(request, respone) {
   respone.writeHead(200, { 'content-type': contentType[extension] });
   fs.readFile(path.join(__dirname, '..', endpoint), (err, file) => {
     if (err)
-      response.end('something went wrong')
+    console.log(err.message);
     else {
       respone.end(file);
     }
