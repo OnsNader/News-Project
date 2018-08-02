@@ -42,18 +42,22 @@ function requestXHR(url, callback, respone) {
 }
 
 function getArrayFromJSONFile(Date, resopne) {
-  for (let i = 0; i < Date.articles.length; i++) {
-    const item = {};
-    item.title = Date.articles[i].title;
-    item.source = Date.articles[i].source.name;
-    item.image = Date.articles[i].urlToImage || 'https://imgur.com/pwlmsrM';
-    item.url = Date.articles[i].url;
-    item.description = Date.articles[i].description;
-    arrayOfData.push(item);
+  if (!Date.articles) {
+    resopne.end(JSON.stringify([]));
+    return;
+  } else {
+    for (let i = 0; i < Date.articles.length; i++) {
+      const item = {};
+      item.title = Date.articles[i].title;
+      item.source = Date.articles[i].source.name;
+      item.image = Date.articles[i].urlToImage || 'https://imgur.com/pwlmsrM';
+      item.url = Date.articles[i].url;
+      item.description = Date.articles[i].description;
+      arrayOfData.push(item);
+    }
+    resopne.end(JSON.stringify(arrayOfData));
+
+    arrayOfData = [];
   }
-  resopne.end(JSON.stringify(arrayOfData));
-
-  arrayOfData = [];
 }
-
 module.exports = handlerAPI;
