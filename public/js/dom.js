@@ -38,5 +38,5 @@ function tryTestingInFrontEnd(i) {
   return i + 1;
 }
 if (typeof module !== 'undefined') {
-  module.exports = { tryTestingInFrontEnd }
+  module.exports = {tryTestingInFrontEnd }
 }

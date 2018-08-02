@@ -83,7 +83,7 @@ test('test of /unknown url', (t) => {
 
 test('test of /news url', (t) => {
     supertest(router)
-        .get('/news')
+        .post('/news')
         .expect(200)
         .expect('Content-Type', 'application/javascript')
         .send(JSON.stringify({ query: 'cat', date: '2018-07-30' }))
@@ -94,4 +94,19 @@ test('test of /news url', (t) => {
             t.end();
         });
 });
+
+test('test of /news url', (t) => {
+    supertest(router)
+        .get('/news')
+        .expect(404)
+        .expect('Content-Type', 'text/html')
+        .end((err, res) => {
+            t.error(err);
+            t.equal(res.headers['content-type'], 'text/html', ' \'unknown pag\' Should Return text/html');
+            t.equal(typeof res.body, 'object', ' \'unknown pag\' Should return object');
+            t.equal(res.statusCode, 404, ' \'unknown page\' Should return 404');
+            t.end();
+        });
+});
+
 
