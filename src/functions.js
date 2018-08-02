@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 
-function handlerHomePage(request, respone, cb) {
+function handlerHomePage(request, respone) {
   respone.writeHead(200, { 'content-type': 'text/html' });
   fs.readFile(path.join(__dirname, '..', 'public', 'index.html'), (err, file) => {
     if (err)
@@ -43,8 +43,5 @@ function handlerOtherFiles(request, respone) {
   });
 }
 
-function handlingError(err) {
-  console.log(err.message);
-}
 
-module.exports = { handlerHomePage, handlerErrorPage, handlerOtherFiles, handlingError };
+module.exports = { handlerHomePage, handlerErrorPage, handlerOtherFiles };
