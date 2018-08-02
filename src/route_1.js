@@ -8,7 +8,7 @@ function router(request, respone) {
     handlerHomePage(request, respone);
   } else if (endpoint.includes('public')) {
     handlerOtherFiles(request, respone);
-  } else if (endpoint.includes('/news')) {
+  } else if (endpoint.includes('/news') &&  request.method === 'POST') {
     handlerAPI(request, respone);
   } else {
     handlerErrorPage(request, respone);
