@@ -37,6 +37,6 @@ function getDataFromFields() {
 function tryTestingInFrontEnd(i) {
   return i + 1;
 }
-if (typeof module === 'undefined') {
+if (typeof module !== 'undefined') {
   module.exports = { tryTestingInFrontEnd }
 }
