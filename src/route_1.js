@@ -1,11 +1,11 @@
 
-const { handlerHomePage, handlerErrorPage, handlerOtherFiles,handlingError } = require('./functions');
+const { handlerHomePage, handlerErrorPage, handlerOtherFiles } = require('./functions');
 const handlerAPI = require('./handling_api');
 
 function router(request, respone) {
   const endpoint = request.url;
   if (endpoint === '/') {
-    handlerHomePage(request, respone,handlingError);
+    handlerHomePage(request, respone);
   } else if (endpoint.includes('public')) {
     handlerOtherFiles(request, respone);
   } else if (endpoint.includes('/news')) {
