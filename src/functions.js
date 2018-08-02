@@ -43,8 +43,5 @@ function handlerOtherFiles(request, respone) {
   });
 }
 
-function handlingError(err) {
-  console.log(err.message);
-}
 
 module.exports = { handlerHomePage, handlerErrorPage, handlerOtherFiles, handlingError };
