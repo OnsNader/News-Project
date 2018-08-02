@@ -5,7 +5,7 @@
 ---
 
 ### LINK :
-https://salty-gorge-26624.herokuapp.com/
+[News-Project Website](https://news-project2.herokuapp.com/)
 
 ---
 
