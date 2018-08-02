@@ -11,7 +11,6 @@ test('test of / home page routes', (t) => {
             t.error(err);
             t.equal(res.headers['content-type'], 'text/html', ' \'home page\' Should Return text/html');
             t.equal(typeof res.body, 'object', ' \'home page\' Should return object');
-            t.equal(res.statusCode, 200, ' \'home page\' Should Return 200');
             t.end();
         });
 });
@@ -25,7 +24,6 @@ test('test of / home page "css/style" routes', (t) => {
             t.error(err);
             t.equal(res.headers['content-type'], 'text/css', ' \'style pag\' Should Return text/css');
             t.equal(typeof res.body, 'object', ' \'style pag\' Should return object');
-            t.equal(res.statusCode, 200, ' \'style page\'  Should Return 200');
             t.end();
         });
 });
@@ -39,8 +37,6 @@ test('test of / home page "css/media" routes', (t) => {
             t.error(err);
             t.equal(res.headers['content-type'], 'text/css', ' \'media pag\' Should Return text/css');
             t.equal(typeof res.body, 'object', ' \'media pag\' Should return object');
-            t.equal(res.statusCode, 200, ' \'media page\'  Should Return 200');
-
             t.end();
         });
 });
@@ -54,7 +50,6 @@ test('test of / home page "js/Dom" routes', (t) => {
             t.error(err);
             t.equal(res.headers['content-type'], 'application/javascript', ' \'Dom pag\' Should Return application/javascript');
             t.equal(typeof res.body, 'object', ' \'Dom pag\' Should return object');
-            t.equal(res.statusCode, 200, ' \'Dom page\'  Should Return 200');
             t.end();
         });
 });
@@ -68,7 +63,6 @@ test('test of / home page "js/xhr" routes', (t) => {
             t.error(err);
             t.equal(res.headers['content-type'], 'application/javascript', ' \'xhr pag\' Should Return application/javascript');
             t.equal(typeof res.body, 'object', ' \'xhr pag\' Should return object');
-            t.equal(res.statusCode, 200, ' \'xhr page\'  Should Return 200');
             t.end();
         });
 });
@@ -95,16 +89,9 @@ test('test of /news url', (t) => {
         .send(JSON.stringify({ query: 'cat', date: '2018-07-30' }))
         .end((err, res) => {
             t.error(err);
-
             t.equal(res.headers['content-type'], 'application/javascript', ' \'news pag\' Should Return application/javascript');
-            t.equal(res.statusCode, 200, ' \'news page\' Should return 200');
             t.equal(typeof res.body, 'object', ' \'news page\' Should return object');
             t.end();
         });
 });
-
-test('try tape is working ',(t)=>{
-    t.equal(1,1,'The Both Should be Equal');
-    t.end();
-})
 
